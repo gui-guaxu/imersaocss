@@ -1,18 +1,61 @@
+
+/* (Soft)Reset do CSS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-image: url("https://wallpapercave.com/wp/wp5501912.jpg");
+    background-image: url('../img/background.jpg');
     background-size:100vw auto;
     font-family: roboto;
     height: 100vh;
+    font-size: 10px;
   }
-  
+/*Se a tela tiver pelo menos 400px vai carregar estes estilos*/  
+@media (min-width: 400px) {
+body {
+  font-size: 14px;
+  }
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 14px;
+    }
+}
+
+
+  header {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   a {
-   color: teal; 
+   color: white; 
     text-decoration: none;
   }
   
   a:hover {
     text-decoration: underline;
   }
+  
+
+
+  .menu {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    background-color: rebeccapurple;
+  }
+
+  .menu a {
+padding: 10px 20px;
+display: block;
+  }
+
   .menu ul {
     display: flex;
     justify-content: space-around;
@@ -24,10 +67,19 @@ body {
   
   .site-subtitle,
   .site-title {
-    color: teal;
+    color: whitesmoke;
     text-align: center;
       
   }
   .site-subtitle {
-    text-align: right;
+    text-align: center;
   }
+
+  .img-portfolio {
+    height: 180px;
+    width: 300px;
+  }
+
+.portfolio-text {
+  color: whitesmoke;
+}
