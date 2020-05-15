@@ -22,20 +22,6 @@ body {
   font-size: 10px;
 }
 
-/*Se a tela tiver pelo menos 400px vai carregar estes estilos*/  
-@media (min-width: 400px) {
-  body {
-  font-size: 14px;
-  }
-}
-
-@media (min-width: 600px) {
-body {
-  font-size: 14px;
-  }
-}
-
-
 header {
   height: 75vh;
   display: flex;
@@ -50,8 +36,6 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
-
 
 .menu {
   position: fixed;
@@ -114,7 +98,50 @@ display: block;
   height: calc(100vh - 3.5em - 48px);
 }
 
+.portfolio figure {
+  text-align: center;
+}
+
+.contato {
+  color: whitesmoke;
+  font-family: 'Cutive Mono', monospace;
+  padding: 1em;
+  height: 25vh;
+  background-color: rebeccapurple;
+}
+
+.contato h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contato .grid {
+  display: grid;
+  grid-template-columns: 1fr repeat(4,50px) 1fr;
+  justify-items: center;
+}
+
+.img-contato {
+  height: 25px;
+  width: 25px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*Se a tela tiver pelo menos 400px vai carregar estes estilos*/  
+@media (min-width: 400px) {
+  body {
+  font-size: 14px;
+  }
+}
+
 @media (min-width: 650px) {
+  body {
+    font-size: 14px;
+    }
+  .portfolio {
+    height: 120vh;
+  }
   .portfolio .grid {
     grid-template-columns: repeat(2, 250px);
   }
@@ -126,8 +153,4 @@ display: block;
     justify-content: space-around;
     align-content: center;
   }
-}
-
-.portfolio figure {
-  text-align: center;
 }
